@@ -1,13 +1,6 @@
+import PropTypes from "prop-types";
 
-const dataSearch = event => {
-    // const value = event.currentTarget.value.toLowerCase();
 
-    // const filter = data.filter(user => {
-    //     return user.name.toLoverCase().includes(value);
-    // });
-    console.log('filter')
-
-}
 
 const Filter = ({value, onChange}) => (
     
@@ -24,6 +17,12 @@ const Filter = ({value, onChange}) => (
         </label>
     
 );
+
+Filter.propTypes = {
+    value: PropTypes.string.isRequired,
+}
+
+
 
 export default Filter;
 

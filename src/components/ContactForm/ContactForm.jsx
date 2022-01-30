@@ -37,7 +37,6 @@ class ContactForm extends Component {
         <Form onSubmit={this.handleSubmit}>
                 
           <label htmlFor="name"> Name{' '}</label>
-            
           <input
             type="text"
             name="name"

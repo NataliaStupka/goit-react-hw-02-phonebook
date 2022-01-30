@@ -1,4 +1,4 @@
-
+import PropTypes from "prop-types";
 
 const ContactList = ({ options, onDeleteContact }) => {
    
@@ -19,5 +19,10 @@ const ContactList = ({ options, onDeleteContact }) => {
         </div>
     );
 };
+
+// ContactList.propTypes = {
+//     options: PropTypes.object,
+// }
+
 
 export default ContactList;

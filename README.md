@@ -1,7 +1,7 @@
-по д/з: для написания формы использован Formik (npm install formik --save); Для
-валидации вводимых значений в форму, установлен npm i yup; установлен пакет для
-генерации уникальных id (npm i nanoid), import { nanoid } from 'nanoid';
-Стилизация: styled-components (npm install --save styled-components)
+по д/з: установлен пакет для генерации уникальных id (npm i nanoid), import {
+nanoid } from 'nanoid'; Стилизация: styled-components (npm install --save
+styled-components); Для написания формы установлен Formik (npm install formik
+--save); Для валидации вводимых значений в форму, установлен npm i yup;
 
 <!-- --------------------------------- -->
 

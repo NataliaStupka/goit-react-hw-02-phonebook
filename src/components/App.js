@@ -20,26 +20,30 @@ class App extends Component {
       
   };
   
-  //получае доступ при сабмите ContactForm к ее state
-  //добавляем новый контакт
-  addContact = ({name, number}) => {
+    //получае доступ при сабмите ContactForm к ее state
+    //добавляем новый контакт
+  addContact = ({ name, number }) => {
     // console.log('как пропс на стр App', data); - деструктуризировали data на {name, number}
     const contact = {
       id: nanoid(),
       name,
       number,
     };
-//     if (contact.name === && contact.number) {
-//   console.log(`такой контакт ${contact.name}:${contact.number} уже есть`)
-// }
 
+    const { contacts } = this.state;
+    if (contacts.find(
+      (contact) => contact.name.toLowerCase() === name.toLowerCase())
+    ) {
+     return alert(`${name} is already in contacts`);
+    };
+   
     this.setState(prevState => ({
       contacts: [contact, ...prevState.contacts]
     }))
-
-
   };
   
+
+
   deleteContact = contactId => {
     // console.log('delete', contactId);
     this.setState(prevState => ({
@@ -85,11 +89,7 @@ class App extends Component {
       </div>
     )
 }
-
-
 }
-
-
 
 
 export default App;
