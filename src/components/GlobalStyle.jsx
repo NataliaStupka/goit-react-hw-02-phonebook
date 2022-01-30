@@ -24,6 +24,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     list-style: none;
   }
+  
   h1,
   h2,
   h3,

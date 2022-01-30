@@ -1,28 +1,36 @@
 import PropTypes from "prop-types";
+import { BsDot } from "react-icons/bs";
+import { ContactsMenu, ContactsItem, ContactButton } from './ContactList.styled.js';
 
 const ContactList = ({ options, onDeleteContact }) => {
    
     return (
-        <div>
-            <ul>
+        
+            <ContactsMenu>
                 {options.map(({ id, name, number }) =>
-                    <li key={id}>
+                    <ContactsItem key={id}><BsDot/>
                         {name}: {number}
-                        <button
+                        <ContactButton
                             type="button"
                             onClick={() => onDeleteContact(id)}>
-                        Delete</button>
-                    </li>
+                            Delete
+                        </ContactButton>
+                    </ContactsItem>
                 )
                 }
-            </ul>
-        </div>
+            </ContactsMenu>
+        
     );
 };
 
-// ContactList.propTypes = {
-//     options: PropTypes.object,
-// }
+ContactList.propTypes = {
+    options: PropTypes.array,
+    onDeleteContact: PropTypes.func.isRequired,
+}
+
+
 
 
 export default ContactList;
+
+

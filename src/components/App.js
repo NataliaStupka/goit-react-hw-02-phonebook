@@ -1,6 +1,7 @@
 
 import { GlobalStyle } from './GlobalStyle';
 import React, { Component } from 'react';
+import { PhonebookTitle, ContactsTitle } from './App.styled';
 // import FormikForm from './FormikForm/FormikForm';
 import ContactForm from './ContactForm/ContactForm';
 import Filter from './Filter/Filter';
@@ -75,16 +76,19 @@ class App extends Component {
     return (
       <div>
         <GlobalStyle />
-        <h1>Phonebook</h1>
+        <PhonebookTitle>Phonebook</PhonebookTitle>
         {/* <FormikForm /> */}
         <ContactForm onSubmit={this.addContact}/>
         
-        <h2>Contacts</h2>
+        <ContactsTitle>Contacts</ContactsTitle>
+        <section>
         <Filter value={filter} onChange={this.changeFilter} />
         <ContactList
           options={visibleContact}
           onDeleteContact={this.deleteContact}
-        /> 
+          /> 
+        </section>
+        
         
       </div>
     )
